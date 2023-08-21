@@ -21,8 +21,10 @@ using namespace gz;
 using namespace sim;
 using namespace systems;
 
+namespace gzyarp
+{
 
-class GazeboYarpIMU
+class IMU
       : public System,
         public ISystemConfigure,
         public ISystemPreUpdate,
@@ -181,15 +183,12 @@ class GazeboYarpIMU
     std::mutex imuMsgMutex;
 };
 
+}
 
  
 // Register plugin
-GZ_ADD_PLUGIN(GazeboYarpIMU,
-                    gz::sim::System,
-                    GazeboYarpIMU::ISystemConfigure,
-                    GazeboYarpIMU::ISystemPreUpdate,
-                    GazeboYarpIMU::ISystemPostUpdate)
- 
-// Add plugin alias so that we can refer to the plugin without the version
-// namespace
-GZ_ADD_PLUGIN_ALIAS(GazeboYarpIMU, "gz::sim::systems::GazeboYarpIMU")
+GZ_ADD_PLUGIN(gzyarp::IMU,
+              gz::sim::System,
+              gzyarp::IMU::ISystemConfigure,
+              gzyarp::IMU::ISystemPreUpdate,
+              gzyarp::IMU::ISystemPostUpdate)
