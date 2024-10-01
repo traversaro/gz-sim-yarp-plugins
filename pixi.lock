@@ -142,6 +142,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libdrm-2.4.123-hb9d3cd8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libedit-3.1.20191231-he28a2e2_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libegl-1.7.0-ha4b6fd6_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libegl-devel-1.7.0-ha4b6fd6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libev-4.33-hd590300_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libevent-2.1.12-hf998b51_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libexpat-2.6.3-h5888daf_0.conda
@@ -214,6 +215,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libode-0.16.2-h30efb56_14.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libogg-1.3.5-h4ab18f5_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libopencv-4.10.0-qt6_py312h01efb12_606.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libopengl-1.7.0-ha4b6fd6_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libopengl-devel-1.7.0-ha4b6fd6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libopenvino-2024.4.0-hac27bb2_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libopenvino-auto-batch-plugin-2024.4.0-h4d9b6c2_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libopenvino-auto-plugin-2024.4.0-h4d9b6c2_0.conda
@@ -511,6 +514,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libdrm-2.4.123-h86ecc28_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libedit-3.1.20191231-he28a2e2_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libegl-1.7.0-hd24410f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libegl-devel-1.7.0-hd24410f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libev-4.33-h31becfc_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libevent-2.1.12-h4ba1bb4_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libexpat-2.6.3-h5ad3122_0.conda
@@ -583,6 +587,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libode-0.16.2-py312h2aa54b4_14.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libogg-1.3.5-h0b9eccb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopencv-4.10.0-headless_py312hc19e177_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopengl-1.7.0-hd24410f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopengl-devel-1.7.0-hd24410f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopenvino-2024.4.0-hd7d4d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopenvino-arm-cpu-plugin-2024.4.0-hd7d4d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libopenvino-auto-batch-plugin-2024.4.0-hf15766e_0.conda
@@ -9865,6 +9871,37 @@ packages:
   size: 53467
   timestamp: 1723474989555
 - kind: conda
+  name: libegl-devel
+  version: 1.7.0
+  build: ha4b6fd6_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libegl-devel-1.7.0-ha4b6fd6_0.conda
+  sha256: 444692f38f052ca8567054677dac246206e50857673dab12caf9bf70ff35e421
+  md5: b331f7eaeedf8a0dc752b9211f4df60c
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libegl 1.7.0 ha4b6fd6_0
+  - libgl-devel 1.7.0 ha4b6fd6_0
+  - xorg-libx11
+  license: LicenseRef-libglvnd
+  size: 30549
+  timestamp: 1723473233921
+- kind: conda
+  name: libegl-devel
+  version: 1.7.0
+  build: hd24410f_0
+  subdir: linux-aarch64
+  url: https://conda.anaconda.org/conda-forge/linux-aarch64/libegl-devel-1.7.0-hd24410f_0.conda
+  sha256: 49d434657046b10d107716841297ab39894673dcdf233dfa66725eb879018fa6
+  md5: b4e87bcf648b2caa56fc5efc29178b91
+  depends:
+  - libegl 1.7.0 hd24410f_0
+  - libgl-devel 1.7.0 hd24410f_0
+  - xorg-libx11
+  license: LicenseRef-libglvnd
+  size: 30527
+  timestamp: 1723475040101
+- kind: conda
   name: libev
   version: '4.33'
   build: h31becfc_2
@@ -15060,6 +15097,60 @@ packages:
   license_family: Apache
   size: 30774201
   timestamp: 1727652433771
+- kind: conda
+  name: libopengl
+  version: 1.7.0
+  build: ha4b6fd6_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libopengl-1.7.0-ha4b6fd6_0.conda
+  sha256: 6807eff238bbd19680184aad70c90c9c14824fca8b52b791b6669e37e0e963a7
+  md5: 8e5037cbb79e56e4eba250cba7fcc784
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libglvnd 1.7.0 ha4b6fd6_0
+  license: LicenseRef-libglvnd
+  size: 50785
+  timestamp: 1723473212137
+- kind: conda
+  name: libopengl
+  version: 1.7.0
+  build: hd24410f_0
+  subdir: linux-aarch64
+  url: https://conda.anaconda.org/conda-forge/linux-aarch64/libopengl-1.7.0-hd24410f_0.conda
+  sha256: b6d2b761e06d89299e746ea7ab273a1290f4ae0757a6c2aa391acc55a5323812
+  md5: 37845cb5373e437b219842d72745640b
+  depends:
+  - libglvnd 1.7.0 hd24410f_0
+  license: LicenseRef-libglvnd
+  size: 58680
+  timestamp: 1723475010385
+- kind: conda
+  name: libopengl-devel
+  version: 1.7.0
+  build: ha4b6fd6_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libopengl-devel-1.7.0-ha4b6fd6_0.conda
+  sha256: 1212d65718e1438838e214197afe3735ca7a1e5a8e4e8b5d48819b20eb0f314d
+  md5: 827cff134185a72d7fd2f869f9649078
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libopengl 1.7.0 ha4b6fd6_0
+  license: LicenseRef-libglvnd
+  size: 15437
+  timestamp: 1723473225061
+- kind: conda
+  name: libopengl-devel
+  version: 1.7.0
+  build: hd24410f_0
+  subdir: linux-aarch64
+  url: https://conda.anaconda.org/conda-forge/linux-aarch64/libopengl-devel-1.7.0-hd24410f_0.conda
+  sha256: 89952d2859a46f01c4b838e4bb30df3fb4989099190d16eaa27a3ceccafc0772
+  md5: 1eb6def3002c39a988d9927431305a1c
+  depends:
+  - libopengl 1.7.0 hd24410f_0
+  license: LicenseRef-libglvnd
+  size: 15505
+  timestamp: 1723475027148
 - kind: conda
   name: libopenvino
   version: 2024.4.0
