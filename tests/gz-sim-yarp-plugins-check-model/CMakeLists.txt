@@ -15,7 +15,7 @@ gsyp_add_tutorial_model_check(laser laser/model.sdf)
 gsyp_add_tutorial_model_check(clock clock/model.sdf)
 gsyp_add_tutorial_model_check(forcetorque-model-one-sensor forcetorque/model_one_sensor/model.sdf)
 gsyp_add_tutorial_model_check(forcetorque-model-two-sensors forcetorque/model_two_sensors/model2sensors.sdf)
-gsyp_add_tutorial_model_check(single-pendulum single_pendulum/model.sdf)
+gsyp_add_tutorial_model_check(single-pendulum single_pendulum/single_pendulum_world.sdf)
 
 # Then check that the command correctly exit a failure if we pass it a invalid model
 add_test(NAME gz-sim-yarp-plugins-check-model-fails-as-expected-with-wrong-world-file
