@@ -485,6 +485,7 @@ bool ControlBoard::updateReferences(const UpdateInfo& _info, EntityComponentMana
         for (int i = 0; i < m_controlBoardData.actuatedAxes.size(); i++)
         {
             m_controlBoardData.physicalJoints[i].commonJointProperties.refPosition = m_controlBoardData.actuatedAxes[i].commonJointProperties.refPosition;
+            m_controlBoardData.physicalJoints[i].commonJointProperties.refTorque = m_controlBoardData.actuatedAxes[i].commonJointProperties.refTorque;
         }
     }
 
